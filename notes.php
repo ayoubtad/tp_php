@@ -9,7 +9,8 @@ function calculerMoyenne($notes)
     return round(array_sum($notes) / count($notes), 2);
 }
 
-function determinerMention($moyenne){
+function determinerMention($moyenne)
+{
     if ($moyenne >= 16) {
         return "Très Bien";
     } elseif ($moyenne >= 14) {
@@ -22,10 +23,15 @@ function determinerMention($moyenne){
         return "Insuffisant";
     }
 }
-function estAdmis($moyenne, $seuil){
-    if ($moyenne >= $seuil){
+function estAdmis($moyenne, $seuil)
+{
+    if ($moyenne >= $seuil) {
         return true;
-    }else{
+    } else {
         return false;
     }
+}
+function formaterNomComplet($prenom, $nom)
+{
+    return ucfirst($prenom) . "" . strtoupper($nom) . "";
 }
