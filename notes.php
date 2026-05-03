@@ -22,3 +22,10 @@ function determinerMention($moyenne){
         return "Insuffisant";
     }
 }
+function estAdmis($moyenne, $seuil){
+    if ($moyenne >= $seuil){
+        return true;
+    }else{
+        return false;
+    }
+}
